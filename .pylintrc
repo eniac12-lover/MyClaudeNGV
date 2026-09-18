@@ -1,0 +1,15 @@
+[BASIC]
+# CLAUDE.md 구현 지침: 함수명/변수명 3글자 이상, camelCase.
+function-rgx=^[a-z][a-zA-Z0-9]{2,}$
+variable-rgx=^[a-z][a-zA-Z0-9]{2,}$
+argument-rgx=^[a-z][a-zA-Z0-9]{2,}$
+attr-rgx=^[a-z][a-zA-Z0-9]{2,}$
+method-rgx=^[a-z][a-zA-Z0-9]{2,}$
+good-names=i,j,k,_
+
+[SIMILARITIES]
+# CLAUDE.md 구현 지침: 중복 코드는 7라인까지 허용 (8라인부터 위반으로 보고).
+min-similarity-lines=8
+ignore-comments=yes
+ignore-docstrings=yes
+ignore-imports=yes

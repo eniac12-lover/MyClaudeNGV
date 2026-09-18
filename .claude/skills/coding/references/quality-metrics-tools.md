@@ -16,7 +16,7 @@ lizard <대상 경로> -l python -C 10 -L 50
 
 ## 2. 중복 코드 7줄까지 허용 (8줄 이상 금지) — `pylint`
 
-프로젝트 루트에 아래 설정을 포함한 `.pylintrc`(또는 `pyproject.toml`의 `[tool.pylint.similarities]`)를 둡니다.
+프로젝트 루트의 `.pylintrc`에 이미 이 설정이 있습니다(직접 새로 만들지 마세요, CI(`​.github/workflows/ci.yml`)도 이 파일을 그대로 사용합니다).
 
 ```ini
 [SIMILARITIES]
@@ -46,7 +46,7 @@ radon raw -s <파일>
 
 ## 4. 네이밍 규칙(3글자 이상, camelCase) — `pylint`
 
-`.pylintrc`에 아래를 추가합니다(최소 3글자를 강제하기 위해 `naming-style` 대신 정규식을 직접 지정합니다).
+프로젝트 루트의 `.pylintrc`에 이미 이 설정이 있습니다(최소 3글자를 강제하기 위해 `naming-style` 대신 정규식을 직접 지정한 것입니다 — 새로 만들지 마세요).
 
 ```ini
 [BASIC]
@@ -64,3 +64,5 @@ method-rgx=^[a-z][a-zA-Z0-9]{2,}$
 ## 게이트 통과 기준
 
 위 4개 명령(`lizard`, `pylint` 중복, `radon raw` 비율 계산, `pylint` 네이밍) 결과가 모두 기준을 만족해야 해당 구현 단위를 "완료"로 표시합니다. 하나라도 위반이면 `tdd` 스킬의 Refactor 단계로 돌아갑니다.
+
+이 게이트는 로컬에서 직접 실행해 확인하는 것이 원칙이지만, PR을 올리면 `.github/workflows/ci.yml`이 동일한 도구(lizard/pylint, 그리고 branch coverage 100%)로 다시 검증합니다 — CI 실패를 로컬 확인 없이 PR로 넘기지 않습니다(`.github/BRANCH_POLICY.md` 참고).
