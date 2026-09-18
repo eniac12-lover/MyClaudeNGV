@@ -1,3 +1,9 @@
 # 교육용 샘플/템플릿 (저작권: Synetics) - 과정 밖 배포·공개 금지, 로컬에만 보관
 /WP_Templates/
 /OEM_Sample/
+
+# Python
+__pycache__/
+*.pyc
+.coverage
+htmlcov/
