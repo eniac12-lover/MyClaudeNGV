@@ -61,7 +61,7 @@ ISO 26262, A-SPICE, ISO 25010을 준수하면서 **명확하고, 일관되고, �
 
 `references/traceability.md`의 ID 체계와 추적성 매트릭스 형식을 사용합니다.
 - 모든 요구사항에 규정된 접두어(STR/SR/NFR/SG/FSR/TSR/SWR 등)로 시작하는 고유 ID를 부여합니다.
-- 요구사항을 생성/수정할 때마다 추적성 매트릭스(`traceability/requirements-traceability.csv` 또는 사용자가 지정한 경로)를 함께 갱신합니다. 매트릭스 갱신을 잊지 마세요 — 요구사항 작성과 별개 작업이 아니라 하나의 완료 조건입니다.
+- 요구사항을 생성/수정할 때마다 공식 추적성 매트릭스(`WP_Templates/Engineering/Traceability/TPL-TRC-001_...xlsx`, `references/traceability.md` §0)를 함께 갱신합니다. 매트릭스 갱신을 잊지 마세요 — 요구사항 작성과 별개 작업이 아니라 하나의 완료 조건입니다.
 - 상위(이해관계자 요구/안전목표) → 하위(설계/코드/테스트) 방향과, 하위 → 상위 방향 모두 확인할 수 있어야 합니다(고아 요구사항·미검증 요구사항이 없는지 주기적으로 점검).
 
 ## 7. 출력

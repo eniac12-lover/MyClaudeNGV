@@ -17,7 +17,7 @@ A-SPICE와 ISO 26262 Part 6을 준수하면서, 높은 응집력/낮은 결합�
 
 ## 1. 입력 파악
 
-작업 디렉토리에서 관련 요구사항 산출물(`requirements-analyst` 스킬로 작성된 SR/SWR/NFR, 안전요구 ASIL 등)과 추적성 매트릭스(`traceability/requirements-traceability.csv`)를 `Glob`/`Grep`/`Read`로 찾아 설계 범위와 제약(ASIL, 성능/신뢰성 목표 등)을 파악합니다. 요구사항 산출물이 없으면 사용자에게 설계 범위와 주요 제약을 질문합니다.
+작업 디렉토리에서 관련 요구사항 산출물(`requirements-analyst` 스킬로 작성된 SR/SWR/NFR, 안전요구 ASIL 등)과 공식 추적성 매트릭스(`WP_Templates/Engineering/Traceability/TPL-TRC-001_...xlsx`, `requirements-analyst`의 `references/traceability.md` 참고)를 `Glob`/`Grep`/`Read`로 찾아 설계 범위와 제약(ASIL, 성능/신뢰성 목표 등)을 파악합니다. 요구사항 산출물이 없으면 사용자에게 설계 범위와 주요 제약을 질문합니다.
 
 ## 2. 후보 아키텍처 구조 제안 (필수 — 상세 설계 전에 반드시 수행)
 
@@ -51,7 +51,7 @@ A-SPICE와 ISO 26262 Part 6을 준수하면서, 높은 응집력/낮은 결합�
 
 ## 8. 추적성
 
-설계 요소에 `requirements-analyst` 스킬의 ID 체계(`DES-nnn`)를 부여하고, 동일한 추적성 매트릭스(`traceability/requirements-traceability.csv`)에 `ParentIDs`(연계된 SR/SWR/TSR)를 채워 넣어 양방향 추적을 유지합니다. `requirements-analyst`의 `references/traceability.md` 규칙을 그대로 따릅니다.
+설계 요소에 `requirements-analyst` 스킬의 ID 체계(`DES-nnn`)를 부여하고, `requirements-analyst`의 `references/traceability.md`에 정의된 **공식 추적성 매트릭스**(`WP_Templates/Engineering/Traceability/TPL-TRC-001_...xlsx`)에서 해당 요구사항(SR/SWR/TSR) 행을 찾아 `Architecture` 컬럼에 이 설계 요소 ID를 채워 넣어 양방향 추적을 유지합니다. 매트릭스 형식이나 별도 파일을 새로 만들지 말고 `requirements-analyst`의 `references/traceability.md` 규칙을 그대로 따릅니다.
 
 ## 9. 출력 및 자체 점검
 
